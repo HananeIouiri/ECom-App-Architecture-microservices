@@ -1,5 +1,6 @@
 package ma.enset.customerservice;
 
+
 import ma.enset.customerservice.entities.Customer;
 import ma.enset.customerservice.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -8,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class CustomerServiceApplication {
+public class CustomerServiceApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(CustomerServiceApplication.class, args);
@@ -17,7 +18,7 @@ public class CustomerServiceApplication {
     CommandLineRunner commandLineRunner(CustomerRepository customerRepository ){
         return args -> {
             customerRepository.save(Customer.builder()
-                    .name("Soukaina").email("Hanane@gmail.com")
+                    .name("Hanane").email("Hanane@gmail.com")
                     .build());
             customerRepository.save(Customer.builder()
                     .name("Ali").email("Ali@gmail.com")
